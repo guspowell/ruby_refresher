@@ -129,8 +129,8 @@ end
 # get the average from an array, rounded to the nearest integer
 # so [10, 15, 25] should return 33
 def average_of_array(array)
-  sum = array.inject { |memo,index| memo + index }
-  answer_float = sum/array.length.to_f
+  sum = array.inject (0.0){ |memo,index| memo + index }
+  answer_float = sum/array.length
   answer_rounded = answer_float.round
 end
 
