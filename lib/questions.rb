@@ -20,7 +20,7 @@ end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
-  array.delete_if { |element| element == nil }
+  array.compact!
 end
 
 # remove instances of nil AND false from an array
@@ -44,6 +44,8 @@ end
 # discard the first 3 elements of an array,
 # e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
 def all_elements_except_first_3(array)
+  array.shift(3)
+  array
 end
 
 # add an element to the beginning of an array
