@@ -7,7 +7,7 @@ RSpec.configure do |config|
 end
 
 describe 'the Friday test :)' do
-  
+
   it 'select_elements_starting_with_a' do
     n = select_elements_starting_with_a ['bananas', 'apples', 'pears', 'avocados']
     expect(n).to eq ['apples', 'avocados']
@@ -18,7 +18,7 @@ describe 'the Friday test :)' do
     expect(n).to eq ['omar', 'idris', 'angela']
   end
 
-  it 'remove_nils_from_array' do
+  fit 'remove_nils_from_array' do
     n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
     expect(n).to eq ['a', 'b', false, 'c']
   end
@@ -218,6 +218,6 @@ describe 'the Friday test :)' do
 
   it 'count_words_of_each_length_in_a_file' do
     n = count_words_of_each_length_in_a_file('lorem.txt') || []
-    expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3}) 
+    expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3})
   end
 end
