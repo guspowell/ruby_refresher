@@ -194,6 +194,8 @@ end
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
+  float.round > float ? (float.round - 1).to_i : flaot.round.to_i
+
 end
 
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
