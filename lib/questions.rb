@@ -188,6 +188,11 @@ end
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+  if float.round < float
+    (float.round + 1).to_i
+  else
+    flaot.round.to_i
+  end
 end
 
 # round down a float up and convert it to an Integer,
